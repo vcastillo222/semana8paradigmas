@@ -1,0 +1,43 @@
+
+package com.mycompany.archivo1;
+
+
+import javax.swing.*; 
+import java.awt.
+/**
+ *
+ * @author Alumno
+ */
+public class Archivo1
+{
+  public static void main(String[] args)
+  {
+    JFrame frame = new JFrame("my first GUI");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(300, 300);
+
+
+
+ ///   JLabel componente = new JLabel("OK");
+ JButton componente = new JButton("aceptar ");
+  componente.setBounds(0, 150, 10, 10);
+  componente.addActionListener(new ActionListener() 
+  {
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+      JOptionPane.showMessageDialog(null,"hola chulisimo");
+    }
+    //la acción que se va a ejecutar, recibe actionevent que es el evento que ser+a ejecutado
+  });
+
+  ////ACTION LISTENER -> ACCION QUE EJECUTARA CUANDO OCURRA UN EVENTO. 
+
+    /// botones. se cambia JTEXTFIELD por un JBUTTON 
+////SET BOUNDS_> UBICACION Y TAMAÑO
+    
+     frame.getContentPane().add(componente);
+         frame.setVisible(true);
+
+  }
+}
