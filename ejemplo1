@@ -1,0 +1,31 @@
+////java swing 
+
+import javax.swing.*; 
+
+public class ejemplo1
+{
+  public stativ void main(String[] args)
+  {
+    JFrame frame = new JFrame("my first GUI"):
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(300. 300);
+    frame.setVisible(true);
+
+
+ ///   JLabel componente = new JLabel("OK");
+ JTextField componente = new JTextField("esto es para ");
+ ///  componente.setVerticalAlignment(SwingConstants.CENTER); 
+   //// componente.setHorizontalAlignment(SwingConstants.CENTER); 
+   componente.setHorizontalAlignment(SwingConstants.RIGHT); 
+   
+
+    
+     frame.getContentPane().add(componente);
+
+  }
+}
+
+////diferentes paneles, tabulaciones (pestañas), herramientas, etc -> java para interfaces. 
+////// contenedores. -> debe contener algo para poder visualizarse de forma apropiada. 
+
+///////componentes -> dentro de contenedores. 
