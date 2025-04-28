@@ -1,0 +1,79 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.archivo1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*; 
+/**
+ *
+ * @author Alumno
+ */
+public class Archivo1
+{
+  public static void main(String[] args)
+  {
+  int width = 300, height = 400; 
+  /// se establece altura y ancho 
+    JFrame frame = new JFrame("my first GUI");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(width, height); 
+    frame.setLayout(null); 
+
+    JLabel userLabel = new JLabel("usuario");
+    userLabel.setBounds(10,10,100,30); 
+////se crea el usuario y se establecen sus dimensiones 
+JTextField user = new JTextField();
+user.setBound(105,10,width - 115, 30); 
+
+    JLabel pasLabel = new JLabel("contrasena");
+    userLabel.setBounds(10,40,100,30); 
+////se crea el usuario y se establecen sus dimensiones 
+JTextField pas = new JTextField();
+pas.setBound(105,10,width - 115, 30); 
+
+///jtextfield -> se escriben los campos 
+
+//// el ancho será menos 115, y el alto 30? 
+
+JLabel resultLabel = new JLabel("x");
+resultLabel.setBound(0, height/2, width, 20);
+resultLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
+
+//estara ubicado por la mitad, ancho de la ventana con un alto de 20
+
+
+JButton boton = new JButton("OK");
+boton.setBounds(10,90, width-20, 30); 
+boton.addActionListener 
+(
+  new ActionListener()
+  {
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+    String s; 
+    s = "la contraseña es " + pas.getText();
+    ///crear un J option se envía un null y mensaje en variable s
+    JOptionPane.showMessageDialog(null, s);
+
+    //cambiar el valor de label 
+    resultLabel.setText("hola"); 
+
+    ///se agrega contraseña. Dónde se espera que aprezca el valor. 
+    }
+  }
+);
+
+frame.getContentPane().add(userLabel);
+frame.getContentPane().add(pasLabel);
+frame.getContentPane().add(user);
+frame.getContentPane().add(pas);
+frame.getContentPane().add(userLabel);
+frame.getContentPane().add(resultLabel);
+frame.setVisible(true); 
+  }
+}
